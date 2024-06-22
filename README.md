@@ -22,20 +22,35 @@ This platform can be expanded to support various applications by upgrading the M
 The following components are required for this project:
 1. [WIZnet Surf 5 Board](https://docs.wiznet.io/Product/Open-Source-Hardware/surf5)
 2. [Coral Micro Board](https://coral.ai/docs/dev-board-micro/get-started/)
-3. [An I2C level shifter module](https://www.aliexpress.com/w/wholesale-txs0102-module.html)
-4. A mobile phone with Whatsapp installed
+3. [I2C level shifter module](https://www.aliexpress.com/w/wholesale-txs0102-module.html)
+4. [0.96" I2C LCD module](https://www.aliexpress.com/item/33008480580.html)
+5. A mobile phone with Whatsapp installed
 
 ---
 ## Software 
-1. Clone this repository by "git clone https://github.com/teamprof/surf5-alarm4deaf"
-2. Install [Coral Dev Board Micro](https://coral.ai/docs/dev-board-micro/get-started)
+1. [WIZnet Surf5 SDK](https://docs.wiznet.io/Product/Open-Source-Hardware/surf5/getting-started)
+2. [Coral Dev Board Micro SDK](https://coral.ai/docs/dev-board-micro/get-started)
+
 ---
+# Getting Started
+## DO NOT connect USB cable to both Surf 5 Board and Coral Miro Board simultaneously. Otherwise, boards MAY be permanently damaged! 
+There are two projects, one for WIZnet Surf5 and the other one for Google Coral Micro Board. They are under subdirectories "src-surf" and "src-coral" respectively.
 
-
-
-
-
-
+## Build and flash alarm sound detection firmware on Coral Micro Board
+1. Install [Coral Dev Board Micro](https://coral.ai/docs/dev-board-micro/get-started)
+2. Clone this repository by "git clone https://github.com/teamprof/surf5-alarm4deaf"
+3. copy the "surf5-alarm4deaf/src-coral" directory to the installed Coral SDK directory
+4. change to the directory "<Coral SDK>/src-coral"
+5. build firmware by typing commands "cmake -B out -S ." followed by "make -C out -j4"  
+   if everything go smooth, you you see the following output
+   [![Build Coral](/doc/image/build-coral.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/build-coral.png)
+6. flash firmware by typing command "python3 coralmicro/scripts/flashtool.py --build_dir out --elf_path out/coralmicro-app"  
+   if everything go smooth, you you see the following output
+   [![Flash Coral](/doc/image/flash-coral.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/flash-coral.png)
+7. Disconnect USB cable between PC and Coral Micro Board, launch a serial terminal (e.g. GTKTerm) with 115200 8N1
+8. Connect USB cable between PC and Coral Micro Board, if everything go smooth, you you see the following output
+   [![Run Coral](/doc/image/run-coral.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/run-coral.png)
+9. (IMPORTANT) Disconnect USB cable between PC and Coral Micro Board.
 
 
 
