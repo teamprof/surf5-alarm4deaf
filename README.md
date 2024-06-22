@@ -69,7 +69,7 @@ There are two projects, one for WIZnet Surf5 and the other one for Google Coral 
 8. launch a serial terminal (e.g. TeraTerm) to connect Surf5 at 115200 8N1. Click the "Reset" button on Surf5, if everything goes smooth, you should see the following
    [![Run surf5](/doc/image/run-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/run-surf5.png)
 9. plug-in Ethernet cable to Surf5. If Surf5 got IP address, you should see the following
-   [![ip-assigned surf5](/doc/image/ip-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/ip-surf5.png)
+   [![ip-assigned surf5](/doc/image/ip-surf5.jpg)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/ip-surf5.jpg)
 10. ### (IMPORTANT) Disconnect USB cable between PC and Surf5.
 
 
