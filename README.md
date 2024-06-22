@@ -21,10 +21,11 @@ This platform can be expanded to support various applications by upgrading the M
 ## Hardware
 The following components are required for this project:
 1. [WIZnet Surf 5 Board](https://docs.wiznet.io/Product/Open-Source-Hardware/surf5)
-2. [Coral Micro Board](https://coral.ai/docs/dev-board-micro/get-started/)
-3. [I2C level shifter module](https://www.aliexpress.com/w/wholesale-txs0102-module.html)
-4. [0.96" I2C LCD module](https://www.aliexpress.com/item/33008480580.html)
-5. A mobile phone with Whatsapp installed
+2. [WIZnet WIZPoE-P1](https://docs.wiznet.io/Product/Open-Source-Hardware/PoE/WIZPoE-P1)
+3. [Coral Micro Board](https://coral.ai/docs/dev-board-micro/get-started/)
+4. [I2C level shifter module](https://www.aliexpress.com/w/wholesale-txs0102-module.html)
+5. [0.96" I2C LCD module](https://www.aliexpress.com/item/33008480580.html)
+6. A mobile phone with Whatsapp installed
 
 ---
 ## Software 
@@ -42,18 +43,44 @@ There are two projects, one for WIZnet Surf5 and the other one for Google Coral 
 3. copy the "surf5-alarm4deaf/src-coral" directory to the installed Coral SDK directory
 4. change to the directory "<Coral SDK>/src-coral"
 5. build firmware by typing commands "cmake -B out -S ." followed by "make -C out -j4"  
-   if everything go smooth, you you see the following output
+   if everything goes smooth, you should see the following output
    [![Build Coral](/doc/image/build-coral.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/build-coral.png)
 6. flash firmware by typing command "python3 coralmicro/scripts/flashtool.py --build_dir out --elf_path out/coralmicro-app"  
-   if everything go smooth, you you see the following output
+   if everything goes smooth, you should see the following output
    [![Flash Coral](/doc/image/flash-coral.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/flash-coral.png)
 7. Disconnect USB cable between PC and Coral Micro Board, launch a serial terminal (e.g. GTKTerm) with 115200 8N1
 8. Connect USB cable between PC and Coral Micro Board, if everything go smooth, you you see the following output
    [![Run Coral](/doc/image/run-coral.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/run-coral.png)
-9. (IMPORTANT) Disconnect USB cable between PC and Coral Micro Board.
+9. ### (IMPORTANT) Disconnect USB cable between PC and Coral Micro Board.
 
 
+## Build and flash Surf5 firmware 
+1. Follow the instruction on WIZnet web site to install Surf5 SDK on VS code  
+   https://docs.wiznet.io/Product/Open-Source-Hardware/surf5/getting-started/install-vscode-guide
+2. Clone this repository by "git clone https://github.com/teamprof/surf5-alarm4deaf"
+3. copy the "surf5-alarm4deaf/src-surf5" directory to the installed Surf5 SDK directory
+4. change to the directory "<Surf5 SDK>/src-surf5"
+5. build the firmware by clicking the "Build" icon on VS code. If everything goes smooth, you should see the following
+   [![Build surf5](/doc/image/build-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/build-surf5.png)
+6. Follow the instruction on WIZnet web site to download and install Surf5 ISP tool  
+   https://docs.wiznet.io/Product/Open-Source-Hardware/surf5/getting-started/flashing-surf5
+7. flash the built Surf5 firmware via the ISP tool. If everything goes smooth, you should see the following
+   [![Flash surf5](/doc/image/flash-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/flash-surf5.png)
+8. launch a serial terminal (e.g. TeraTerm) to connect Surf5 at 115200 8N1. Click the "Reset" button on Surf5, if everything goes smooth, you should see the following
+   [![Run surf5](/doc/image/run-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/run-surf5.png)
+9. plug-in Ethernet cable to Surf5. If Surf5 got IP address, you should see the following
+   [![ip-assigned surf5](/doc/image/ip-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/ip-surf5.png)
+10. ### (IMPORTANT) Disconnect USB cable between PC and Surf5.
 
+
+## Complete demo
+## DO NOT connect USB cable to either Surf 5 Board or Coral Miro Board. Otherwise, boards MAY be permanently damaged! 
+1. wiring between WIZnet Surf5 and Coral Micro Board according to schematic design
+2. short/close the jumper J5 to connect Surf5 5V to Coral Micro board 5V
+3. mount WIZPoE-P1 onto Surf5 
+4. connect the Surf5 with an Ethernet cable to a PoE Hub. If everything goes smooth, you should see the following
+   [![poe surf5](/doc/image/poe-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/poe-surf5.png)
+5. 
 
 
 ---
