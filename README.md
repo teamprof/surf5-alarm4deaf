@@ -54,7 +54,7 @@ There are two projects, one for WIZnet Surf5 and the other one for Google Coral 
 9. ### (IMPORTANT) Disconnect USB cable between PC and Coral Micro Board.
 
 
-## Build and flash Surf5 firmware 
+## Build and flash Surf5 firmware
 1. Follow the instruction on WIZnet web site to install Surf5 SDK on VS code  
    https://docs.wiznet.io/Product/Open-Source-Hardware/surf5/getting-started/install-vscode-guide
 2. Clone this repository by "git clone https://github.com/teamprof/surf5-alarm4deaf"
