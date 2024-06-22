@@ -4,6 +4,11 @@ src-coral/
 
 
 
+src-coral/coralmicro/
+src-coral/out/
+
+
+
 # Prerequisites
 *.d
 
