@@ -82,6 +82,10 @@ There are two projects, one for WIZnet Surf5 and the other one for Google Coral 
    [![poe surf5](/doc/image/poe-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/poe-surf5.png)
 5. 
 
+## Demo
+Video demo is available on:
+1. [surf5 alarm4deaf video 1](https://www.youtube.com/watch?v=j0oOIK2erMc)  
+2. [surf5 alarm4deaf video 2](https://www.youtube.com/watch?v=dCqINISsorI)  
 
 ---
 ### Troubleshooting
