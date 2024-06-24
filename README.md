@@ -80,7 +80,29 @@ There are two projects, one for WIZnet Surf5 and the other one for Google Coral 
 3. mount WIZPoE-P1 onto Surf5 
 4. connect the Surf5 with an Ethernet cable to a PoE Hub. If everything goes smooth, you should see the following
    [![poe surf5](/doc/image/poe-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/poe-surf5.png)
-5. 
+
+
+## Software explanation in high level
+Communication between Surf5 and Coral occurs via I2C. Surf5 acts as the I2C master, while Coral serves as the slave. After Surf5 initializes the network code and receives an assigned IP address, it polls Coral’s status every second. When Coral is initialized and receives the “CommandGetStatus” command from Surf5, it responds with the status “StatusRunning.” Once Surf5 receives this response, it continues to poll Coral’s inference result by sending the I2C command “CommandGetResult” every 0.5 seconds. Coral’s inference result can be either “ResultAlarmOn” or “ResultAlarmOff,” depending on the alarm sound detection outcome. Additionally, Surf5 sends a WhatsApp text message when there is an update in the alarm detection result.
+```
+    surf5                                 coral
+      |                                     |
+      |      CommandGetStatus @ 1Hz         |
+      | ----------------------------------> |
+      |                                     |
+      |          StatusRunning              |
+      | <---------------------------------- |
+      |                                     |
+      |                                     |
+      |                                     |
+      |      CommandGetResult @ 2Hz         |
+      | ----------------------------------> |
+      |                                     |
+      |   ResultAlarmOn / ResultAlarmOff    |
+      | <---------------------------------- |
+      |                                     |
+
+```
 
 ## Demo
 Video demo is available on:
