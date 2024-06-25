@@ -79,7 +79,7 @@ There are two projects, one for WIZnet Surf5 and the other one for Google Coral 
 2. short/close the jumper J5 to connect Surf5 5V to Coral Micro board 5V
 3. mount WIZPoE-P1 onto Surf5 
 4. connect the Surf5 with an Ethernet cable to a PoE Hub. If everything goes smooth, you should see the following
-   [![poe surf5](/doc/image/poe-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/poe-surf5.png)
+   [![poe surf5](/doc/image/poe-surf5.jpg)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/poe-surf5.jpg)
 
 
 ## Software explanation in high level
