@@ -60,17 +60,18 @@ There are two projects, one for WIZnet Surf5 and the other one for Google Coral 
 2. Clone this repository by "git clone https://github.com/teamprof/surf5-alarm4deaf"
 3. copy the "surf5-alarm4deaf/src-surf5" directory to the installed Surf5 SDK directory
 4. change to the directory "<Surf5 SDK>/src-surf5"
-5. build the firmware by clicking the "Build" icon on VS code. If everything goes smooth, you should see the following
+5. Follow the instruction on "https://www.callmebot.com/blog/free-api-whatsapp-messages/" to get APIKEY. Replace the "<MobileNumber>" and "<ApiKey>" values with your mobile number and the APIKEY got on step 5 in "secret.h".
+6. build the firmware by clicking the "Build" icon on VS code. If everything goes smooth, you should see the following
    [![Build surf5](/doc/image/build-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/build-surf5.png)
-6. Follow the instruction on WIZnet web site to download and install Surf5 ISP tool  
+7. Follow the instruction on WIZnet web site to download and install Surf5 ISP tool  
    https://docs.wiznet.io/Product/Open-Source-Hardware/surf5/getting-started/flashing-surf5
-7. flash the built Surf5 firmware via the ISP tool. If everything goes smooth, you should see the following
+8. flash the built Surf5 firmware via the ISP tool. If everything goes smooth, you should see the following
    [![Flash surf5](/doc/image/flash-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/flash-surf5.png)
-8. launch a serial terminal (e.g. TeraTerm) to connect Surf5 at 115200 8N1. Click the "Reset" button on Surf5, if everything goes smooth, you should see the following
+9. launch a serial terminal (e.g. TeraTerm) to connect Surf5 at 115200 8N1. Click the "Reset" button on Surf5, if everything goes smooth, you should see the following
    [![Run surf5](/doc/image/run-surf5.png)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/run-surf5.png)
-9. plug-in Ethernet cable to Surf5. If Surf5 got IP address, you should see the following
+10. plug-in Ethernet cable to Surf5. If Surf5 got IP address, you should see the following
    [![ip-assigned surf5](/doc/image/ip-surf5.jpg)](https://github.com/teamprof/surf5-alarm4deaf/blob/main/doc/image/ip-surf5.jpg)
-10. ### (IMPORTANT) Disconnect USB cable between PC and Surf5.
+11. ### (IMPORTANT) Disconnect USB cable between PC and Surf5.
 
 
 ## Complete demo
