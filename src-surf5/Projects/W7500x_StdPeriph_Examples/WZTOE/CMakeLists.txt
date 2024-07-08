@@ -1,0 +1,6 @@
+add_subdirectory(WZTOE_DHCPClient)
+add_subdirectory(WZTOE_DNSClient)
+add_subdirectory(WZTOE_Loopback)
+add_subdirectory(WZTOE_UDPMulticasting)
+add_subdirectory(WZTOE_WebClient)
+add_subdirectory(WZTOE_WebServer)
