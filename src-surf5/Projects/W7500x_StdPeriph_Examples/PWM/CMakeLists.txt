@@ -1,0 +1,4 @@
+add_subdirectory(PWM_CaptureMode)
+add_subdirectory(PWM_CounterMode)
+add_subdirectory(PWM_DeadZoneGeneration)
+add_subdirectory(PWM_PWMOutput)
