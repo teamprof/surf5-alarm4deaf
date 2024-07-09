@@ -24,9 +24,3 @@
 
 // replace "<MobileNumber>" and "<ApiKey>" with your whatsapp phone number and API key from callmebot
 #define CALLMEBOT_PATH "/whatsapp.php?phone=<MobileNumber>&apikey=<ApiKey>&text="
-
-////////////////////////////////////////////////////////////////////////////////////////////
-// IMPORTANT: DO NOT disclose the following information
-////////////////////////////////////////////////////////////////////////////////////////////
-#undef CALLMEBOT_PATH
-#define CALLMEBOT_PATH "/whatsapp.php?phone=85262958173&apikey=6092947&text="
